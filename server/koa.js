@@ -83,7 +83,7 @@ app.use(function *(next) {
   if (isApi && !user) {
     this.status = 401;
     this.body = '401 Unauthorized';
-    return;
+   return;
   }
   this.request.user = user;
   if (user) {
@@ -91,7 +91,7 @@ app.use(function *(next) {
     if (this.request.method === 'GET') {
       var conditions;
       var query = clone(this.request.query);
-      try {
+     try {
         conditions = (query.conditions && JSON.parse(query.conditions)) || {};
       } catch (err) {
         console.error(err);
@@ -111,7 +111,7 @@ app.use(function *(next) {
     }
   }
   yield next;
-});
+   });
 
 // Connect REST API
 rest(app);

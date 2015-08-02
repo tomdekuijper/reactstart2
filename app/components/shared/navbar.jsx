@@ -51,16 +51,14 @@ export default class Navbar extends React.Component {
           <div className="container-fluid">
             <div className="navbar-header">
               <Link to='app' className="navbar-brand">
-                <i className="fa fa-film"></i> FilmDB
+                <i className="fa fa-film"></i> StarterKit
               </Link>
             </div>
             <ul className="nav navbar-nav">
               <li>
-                <NavItemLink to='directors'>Directors</NavItemLink>
+                <NavItemLink to='directors'>Item1</NavItemLink>
               </li>
-              <li>
-                <NavItemLink to='films'>Films</NavItemLink>
-              </li>
+              
             </ul>
             <ul className="nav navbar-nav pull-right">
               <li onClick={this.logout.bind(this)}>

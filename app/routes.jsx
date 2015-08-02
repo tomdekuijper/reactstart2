@@ -13,18 +13,8 @@ export default (
     <Route
       name='login'
       handler={require('./components/login')} />
-    <Route
-      name='films'
-      handler={require('./components/films')} />
-    <Route
-      name='director'
-      path='director/:id'
-      handler={require('./components/director-profile')} />
-    <Route
-      name='film'
-      path='film/:id'
-      handler={require('./components/film-profile')} />
-    <NotFoundRoute handler={require('./pages/not-found')} />
+
+   <NotFoundRoute handler={require('./pages/not-found')} />
   </Route>
 );
 

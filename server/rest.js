@@ -1,8 +1,6 @@
 import generateApi from 'koa-mongo-rest';
 import koaRouter from 'koa-router';
-import Car from './models/car';
 import Director from './models/director';
-import Film from './models/film';
 import User from './models/user';
 import bcrypt from 'bcrypt';
 import uuid from 'node-uuid';
@@ -14,8 +12,8 @@ export default function(app) {
 
   app.use(koaRouter(app));
 
-  generateApi(app, Car, '/api');
-  generateApi(app, Film, '/api');
+//  generateApi(app, Car, '/api');
+//  generateApi(app, Film, '/api');
   generateApi(app, Director, '/api');
 
   app.post('/auth/register', function *(next) {

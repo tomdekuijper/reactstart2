@@ -2,14 +2,12 @@
 
 import React from 'react';
 import connectToStores from 'alt/utils/connectToStores';
-import FilmItem from 'components/shared/film-item';
+//import FilmItem from 'components/shared/film-item';
 
 import DirectorsStore from 'stores/directors-store';
-import FilmsStore from 'stores/films-store';
 import StatusStore from 'stores/directors-store';
 import LoginStore from 'stores/login-store';
 import DirectorsActions from 'actions/directors-actions';
-import FilmsActions from 'actions/films-actions';
 import StatusActions from 'actions/status-actions';
 import LoginActions from 'actions/login-actions';
 
@@ -22,19 +20,18 @@ export default class DirectorProfile extends React.Component {
   //   flux: React.PropTypes.object.isRequired
   // }
   static getStores() {
-    return [DirectorsStore, FilmsStore, StatusStore];
+    return [DirectorsStore, StatusStore];
   }
   static getPropsFromStores() {
     return {
       director: DirectorsStore.getState().currentDirector,
-      films: FilmsStore.getState().filteredFilms,
       status: StatusStore.getState()
     };
   }
   componentWillMount() {
     const id = this.context.router.getCurrentParams().id;
     DirectorsActions.get(id);
-    FilmsActions.findByDirectorId(id);
+//    FilmsActions.findByDirectorId(id);
   }
   render() {
     if (this.props.director === null) {
@@ -52,9 +49,9 @@ export default class DirectorProfile extends React.Component {
           <h3>Bio:</h3>
           <p>{this.props.director.biography}</p>
           <h1>Filmography:</h1>
-          {this.props.films && this.props.films.map((film, index) =>
-            <FilmItem key={index} film={film} inlined={true}/>
-          )}
+//          {this.props.films && this.props.films.map((film, index) =>
+//            <FilmItem key={index} film={film} inlined={true}/>
+//          )}
         </div>
       );
     }

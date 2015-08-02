@@ -49,8 +49,8 @@ export default class FilmProfile extends React.Component {
     return (
     <div className="container">
       <div className="jumbotron col-centered col-xs-10 col-sm-8 col-md-7 ">
-        <h1>FilmDB</h1>
-        <p className="lead">Watch This™</p>
+        <h1>Starterpack</h1>
+        <p className="lead">React Starter Template</p>
         <h2>Login or create account</h2>
         <br/>
         {error}
