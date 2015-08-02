@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Isomorphic React + Flux film database example
 
 > Complete application example including user authentication using koa on server side, and React/Flux(Alt) on frontend. Also uses koa-mongo-rest to generate REST API, and restful.js to consume them. With a healthy dose of Bootstrap, using react-bootstrap.
@@ -86,3 +87,6 @@ You can also use `processes.json` to run the application with [PM2 Monitor](http
 
 * `$ pm2 start processes.json`
 
+=======
+# reactstart2
+>>>>>>> e8e366cfe6fb3fa22cb47df6a6908d95959d65c0
